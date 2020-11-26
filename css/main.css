@@ -2,6 +2,10 @@
     box-sizing: border-box;
 }
 
+main.touch-action {
+    touch-action: none;
+}
+
 :root {
     --basebg: #f4f4f4;
     --white: #fff;
@@ -104,6 +108,11 @@ body {
     transform: translateX(-150%);
     transition: transform .5s ease 0s;
 }
+
+/* .sidebar.right {
+    touch-action: pan-right;
+    -ms-touch-action: pan-right;
+} */
 
 .sidebar--active {
     transform: translateX(0%);
