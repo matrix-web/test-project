@@ -2,8 +2,20 @@
     box-sizing: border-box;
 }
 
-main.touch-action {
+/* main.touch-action {
     touch-action: none;
+} */
+
+main.right {
+    touch-action: pan-right;
+}
+
+main.left {
+    touch-action: pan-left;
+}
+
+main.left.right {
+    touch-action: pan-y;
 }
 
 :root {
@@ -41,6 +53,12 @@ body {
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     background-color: #f4f4f4;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 /* utils */
