@@ -1,0 +1,62 @@
+.toggle {
+    cursor: pointer;
+}
+
+.toggle__real {
+    width: .1px;
+    height: .1px;
+    position: absolute;
+    opacity: 0;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    z-index: -1;
+}
+
+.toggle__fake {
+    position: relative;
+    display: inline-block;
+    margin-right: 6px;
+    width: 37px;
+    height: 20px;
+    background-color: #c4c4c4;
+    border-radius: 10px;
+    vertical-align: text-bottom;
+    padding: 2px;
+}
+
+.toggle__fake::before {
+    content: '';
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: #3C3C3C;
+    border-radius: 50%;
+    -webkit-transform: translateX(0%);
+        -ms-transform: translateX(0%);
+            transform: translateX(0%);
+    -webkit-transition: -webkit-transform .2s ease-in;
+    transition: -webkit-transform .2s ease-in;
+    -o-transition: transform .2s ease-in;
+    transition: transform .2s ease-in;
+    transition: transform .2s ease-in, -webkit-transform .2s ease-in;
+}
+
+.toggle__title {
+    line-height: 1.1875;
+    color: #3C3C3C;
+}
+
+.toggle__real:checked + .toggle__fake {
+    background-color: #FFE074;
+}
+
+.toggle__real:checked + .toggle__fake::before {
+    -webkit-transform: translateX(100%);
+        -ms-transform: translateX(100%);
+            transform: translateX(100%);
+}
+
+.toggle__real:checked ~ .toggle__title {
+    font-weight: 500;
+}

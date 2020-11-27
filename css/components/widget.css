@@ -1,0 +1,62 @@
+.widget + .widget {
+    margin-top: 32px;
+}
+
+.widget__title {
+    position: relative;
+    margin-bottom: 20px;
+    font-size: 1.125rem;
+    line-height: 1.16;
+    font-weight: 700;
+    color: #000;
+    cursor: pointer;
+}
+
+.widget__title::after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    right: -2px;
+    top: -3px;
+    width: 24px;
+    height: 24px;
+    background-image: url('./../../img/icons/chevron-up.svg');
+    background-repeat: no-repeat;
+    background-size: initial;
+    background-position: center;
+    -webkit-transition: -webkit-transform .3s ease-in 0s;
+    transition: -webkit-transform .3s ease-in 0s;
+    -o-transition: transform .3s ease-in 0s;
+    transition: transform .3s ease-in 0s;
+    transition: transform .3s ease-in 0s, -webkit-transform .3s ease-in 0s;
+}
+
+.widget__title--active::after {
+    -webkit-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+            transform: rotate(180deg);
+}
+
+.widget__body--hidden {
+    display: none;
+}
+
+.widget__show-hidden {
+    display: inline-block;
+    padding: 0;
+    margin-top: 15px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    line-height: 1.1875;
+    color: #4290c9;
+    cursor: pointer;
+    -webkit-transition: color 0.2s ease-in;
+    -o-transition: color 0.2s ease-in;
+    transition: color 0.2s ease-in;
+}
+
+.widget__show-hidden:hover {
+    text-decoration: underline;
+    color: #007fda;
+}

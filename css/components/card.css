@@ -1,0 +1,134 @@
+.cards-holder {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+
+@media (min-width: 620px) {
+    .cards-holder {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        -webkit-box-align: stretch;
+            -ms-flex-align: stretch;
+                align-items: stretch;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    }
+}
+
+.cards-holder > .card-link {
+    margin-bottom: 30px;
+}
+
+.hidden-cards {
+    display: none;
+}
+
+.card-link {
+    display: inline-block;
+    text-decoration: none;
+    -webkit-transition: all .2s ease-in;
+    -o-transition: all .2s ease-in;
+    transition: all .2s ease-in;
+}
+
+.card-link:hover {
+    opacity: .8;
+    -webkit-transform: translateY(-5px);
+        -ms-transform: translateY(-5px);
+            transform: translateY(-5px);
+}
+
+.card-link--hidden {
+    display: none;
+}
+
+.card {
+    position: relative;
+    max-width: 270px;
+    background-color: #fff;
+}
+
+.card__badges {
+    position: absolute;
+    left: 15px;
+    top: 10px;
+    font-size: .875rem;
+}
+
+.card__badges > * + * {
+    margin-left: 8px;
+}
+
+.card__badge {
+    display: inline-block;
+    height: 22px;
+    padding: 0 10px;
+    line-height: 22px;
+    border-radius: 4px;
+    color: #000;
+}
+
+.card__badge--class {
+    background-color: #FFCF26;
+}
+
+.card__badge--credit {
+    background-color: #11BE75;
+    color: #fff;
+}
+
+.card__img {
+    overflow: hidden;
+}
+
+.card__content {
+    padding: 15px 15px 20px;
+    font-size: .875rem;
+    line-height: 1.143;
+    color: #000;
+}
+
+.card__title {
+    margin-bottom: 10px;
+    font-size: 1.125rem;
+    line-height: 1.16;
+    font-weight: 700;
+    color: #000;
+}
+
+.card__term {
+    margin-bottom: 10px;
+}
+
+.card__metro {
+    margin-bottom: 10px;
+}
+
+.card__metro::before {
+    content: '';
+    display: inline-block;
+    margin-right: 10px;
+    width: 16px;
+    height: 11px;
+    vertical-align: baseline;
+    background-image: url('./../../img/icons/moscow-metro.svg');
+    background-repeat: no-repeat;
+    background-size: initial;
+}
+
+.card__address {
+    color: #777;
+}
